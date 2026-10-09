@@ -1,11 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Inscripción</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Formulario de Inscripción Curso</h1>
+        <p>Rellene cuidadosamente el formulario de Inscripción</p>
+
+        <form action="php/enviar.php" method="post">
+          <!-- Nombre del alumno -->
+          <fieldset>
+            <legend>Nombre del alumno</legend>
+
+            <div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
+              <label for="name">Name</label>
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="middle_name"
+                id="middle_name"
+                placeholder="Middle Name"
+              />
+              <label for="middle_name">Middle Name</label>
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="last_name"
+                id="last_name"
+                placeholder="Last Name"
+              />
+              <label for="Last_Name">Last Name</label>
+            </div>
+          </fieldset>
+
+          <!-- Fecha de nacimiento y Género -->
+          <div>
+            <div>
+              <label for="birthdate">Birthdate</label>
+              <input type="date" name="birthdate" id="birthdate" />
+              <small>Date</small>
+            </div>
+
+            <div>
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender">
+                <option value="" disabled selected>Select</option>
+                <option value="masculine">Masculine</option>
+                <option value="feminine">Feminine</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Dirección -->
+          <fieldset>
+            <legend>Dirección</legend>
+            <div>
+              <input
+                type="text"
+                name="address_1"
+                id="address_1"
+                placeholder="Street address"
+              />
+              <label for="address_1">Street address</label>
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="address_2"
+                id="address_2"
+                placeholder="Street address, Line 2"
+              />
+              <label for="address_2">Street Address for Line 2</label>
+            </div>
+
+            <div>
+              <div>
+                <input type="text" name="city" id="city" placeholder="city" />
+                <label for="city">City</label>
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="state"
+                  id="state"
+                  placeholder="State"
+                />
+                <label for="state">State / Province</label>
+              </div>
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="zip_code"
+                id="zip_code"
+                placeholder="Zip Code"
+              />
+              <label for="zip_code">Zip Code</label>
+            </div>
+          </fieldset>
+
+          <!-- Email y Teléfono -->
+          <div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="ejemplo@ejemplo.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input
+                type="phone"
+                name="phone"
+                id="phone"
+                placeholder="(000) 000-0000"
+              />
+              <small>Please enter a valid phone number.</small>
+            </div>
+          </div>
+
+          <!-- Has recibido otros cursos anteriormente? -->
+          <div>
+            <label>Ha recibido otros cursos Anteriormente?</label>
+            <div>
+              <input type="radio" name="cursos_previos" id="si" value="si" />
+              <label for="yes">Yes</label>
+            </div>
+            <div>
+              <input type="radio" name="cursos_previos" id="no" value="no" />
+              <label for="no">No</label>
+            </div>
+          </div>
+
+          <!-- Empresa y Cursos -->
+          <div>
+            <div>
+              <label for="company">Company</label>
+              <input type="text" name="company" id="company" />
+            </div>
+            <div>
+              <label for="courses">Courses</label>
+              <select name="courses" id="courses">
+                <option value="">Select</option>
+                <option value="logic">Web Logic and Programming</option>
+                <option value="web_development">Web Development</option>
+                <option value="cybersecurity">Cybersecurity</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Comentarios adicionales -->
+          <div>
+            <label for="comments">additional comments</label>
+            <textarea name="comments" id="comments" rows="5"></textarea>
+          </div>
+
+          <!-- Botón Enviar -->
+          <div>
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
