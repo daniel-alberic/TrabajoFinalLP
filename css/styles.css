@@ -1,1 +1,104 @@
-/* <!-- prueba --> */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Londrina Solid", sans-serif;
+}
+
+/* Estilo general del cuerpo para centrar todo */
+body {
+    background-image: url(https://previews.123rf.com/images/lightvisionftb/lightvisionftb2112/lightvisionftb211200037/180141663-magic-banner-for-astrology-golden-line-on-black-background-magic-zodiac-tarot-universe-space.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal del formulario para que no ocupe toda la pantalla */
+form {
+    width: 100%;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+fieldset {
+    margin-top: 25px;
+    padding: 25px;
+    background: rgb(15, 12, 41, 0.85);
+    border: 1px solid rgb(228, 246, 37, 0.4);
+    border-radius: 11px;
+    box-shadow: 0 8px 32px rgb(0, 0, 0, 0.5);
+}
+
+/* Espaciado interno para cada cajita de input */
+fieldset div {
+    margin-bottom: 15px;
+}
+
+/* Campos de texto más estilizados */
+input[type="text"], input[type="email"], input[type="phone"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgb(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ffff;
+    font-family: inherit;
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255, 0.5);
+}
+
+/* Estilo específico para los select (menús desplegables) para que las opciones se lean bien */
+select {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgb(15, 12, 41, 0.95);
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Grechen Fuemen", cursive;
+}
+
+select:hover {
+    background-color: rgb(228, 246, 37, 0.8);
+    border: 2px solid #fff;
+    color: #ae0f0f;
+}
+
+.titulo {
+    text-align: center;
+    padding: 20px;
+    font-size: 60px;
+    color: rgb(228, 246, 37);
+}
+
+.seccion {
+    padding: 0 40px;
+}
+
+.titulo-parrafo {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+button {
+    background: #8a0606;
+    color: #fff;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    font-size: 30px;
+
+    &:hover {
+        border: 2px solid rgb(228, 246, 37, 0.8);
+        color: #000000;
+    }
+}

@@ -3,18 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Formulario de Inscripción</title>
   </head>
   <body>
     <main>
-      <section>
-        <h1>Formulario de Inscripción Curso</h1>
-        <p>Rellene cuidadosamente el formulario de Inscripción</p>
+      <section class="seccion">
+        <h1 class="titulo">Formulario de Inscripción Curso</h1>
+        <p class="titulo-parrafo">
+          Rellene cuidadosamente el formulario de Inscripción
+        </p>
 
         <form action="php/enviar.php" method="post">
           <!-- Nombre del alumno -->
           <fieldset>
-            <legend>Nombre del alumno</legend>
+            <legend><h2>Nombre del alumno</h2></legend>
 
             <div>
               <input
@@ -24,7 +34,7 @@
                 placeholder="Name"
                 required
               />
-              <label for="name">Name</label>
+              <label for="name"><p>Name</p></label>
             </div>
 
             <div>
@@ -34,7 +44,7 @@
                 id="middle_name"
                 placeholder="Middle Name"
               />
-              <label for="middle_name">Middle Name</label>
+              <label for="middle_name"><p>Middle Name</p></label>
             </div>
 
             <div>
@@ -44,31 +54,31 @@
                 id="last_name"
                 placeholder="Last Name"
               />
-              <label for="Last_Name">Last Name</label>
+              <label for="Last_Name"><p>Last Name</p></label>
             </div>
           </fieldset>
 
           <!-- Fecha de nacimiento y Género -->
           <div>
             <div>
-              <label for="birthdate">Birthdate</label>
+              <label for="birthdate"><p>Birthdate</p></label>
               <input type="date" name="birthdate" id="birthdate" />
-              <small>Date</small>
+              <small><p>Date</p></small>
             </div>
 
             <div>
-              <label for="gender">Gender</label>
+              <label for="gender"><p>Gender</p></label>
               <select name="gender" id="gender">
-                <option value="" disabled selected>Select</option>
-                <option value="masculine">Masculine</option>
-                <option value="feminine">Feminine</option>
+                <option value="" disabled selected><p>Select</p></option>
+                <option value="masculine"><p>Masculine</p></option>
+                <option value="feminine"><p>Feminine</p></option>
               </select>
             </div>
           </div>
 
           <!-- Dirección -->
           <fieldset>
-            <legend>Dirección</legend>
+            <legend><h2>Dirección</h2></legend>
             <div>
               <input
                 type="text"
@@ -76,7 +86,7 @@
                 id="address_1"
                 placeholder="Street address"
               />
-              <label for="address_1">Street address</label>
+              <label for="address_1"><p>Street address</p></label>
             </div>
 
             <div>
@@ -86,13 +96,13 @@
                 id="address_2"
                 placeholder="Street address, Line 2"
               />
-              <label for="address_2">Street Address for Line 2</label>
+              <label for="address_2"><p>Street Address for Line 2</p></label>
             </div>
 
             <div>
               <div>
                 <input type="text" name="city" id="city" placeholder="city" />
-                <label for="city">City</label>
+                <label for="city"><p>City</p></label>
               </div>
 
               <div>
@@ -102,7 +112,7 @@
                   id="state"
                   placeholder="State"
                 />
-                <label for="state">State / Province</label>
+                <label for="state"><p>State / Province</p></label>
               </div>
             </div>
 
@@ -113,14 +123,14 @@
                 id="zip_code"
                 placeholder="Zip Code"
               />
-              <label for="zip_code">Zip Code</label>
+              <label for="zip_code"><p>Zip Code</p></label>
             </div>
           </fieldset>
 
           <!-- Email y Teléfono -->
           <div>
             <div>
-              <label for="email">Email</label>
+              <label for="email"><p>Email</p></label>
               <input
                 type="email"
                 name="email"
@@ -130,7 +140,7 @@
               />
             </div>
             <div>
-              <label for="phone">Phone Number</label>
+              <label for="phone"><p>Phone Number</p></label>
               <input
                 type="phone"
                 name="phone"
@@ -143,7 +153,7 @@
 
           <!-- Has recibido otros cursos anteriormente? -->
           <div>
-            <label>Ha recibido otros cursos Anteriormente?</label>
+            <label><h3>Ha recibido otros cursos Anteriormente?</h3></label>
             <div>
               <input type="radio" name="cursos_previos" id="si" value="si" />
               <label for="yes">Yes</label>
@@ -157,11 +167,11 @@
           <!-- Empresa y Cursos -->
           <div>
             <div>
-              <label for="company">Company</label>
+              <label for="company"><h2>Company</h2></label>
               <input type="text" name="company" id="company" />
             </div>
             <div>
-              <label for="courses">Courses</label>
+              <label for="courses"><h2>Courses</h2></label>
               <select name="courses" id="courses">
                 <option value="">Select</option>
                 <option value="logic">Web Logic and Programming</option>
@@ -173,7 +183,7 @@
 
           <!-- Comentarios adicionales -->
           <div>
-            <label for="comments">additional comments</label>
+            <label for="comments"><p>additional comments</p></label>
             <textarea name="comments" id="comments" rows="5"></textarea>
           </div>
 
@@ -184,5 +194,7 @@
         </form>
       </section>
     </main>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
